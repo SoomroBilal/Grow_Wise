@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2023-10-31T13:24:19.940Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36" etag="VWnA9SeTYU8s6EDD1RMb" version="22.0.8" type="device">
+  <diagram name="Page-1" id="Rn-Wfl9AoB8ILwuhHQX4">
+    <mxGraphModel dx="30" dy="446" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-44" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="1090" y="327" width="431" height="445" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-28" value="" style="rounded=0;whiteSpace=wrap;html=1;container=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" vertex="1">
+          <mxGeometry x="141" width="180" height="337" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-29" value="Upload Image" style="ellipse;whiteSpace=wrap;html=1;container=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" vertex="1">
+          <mxGeometry x="181" y="30" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-30" value="View Disease and Cure" style="ellipse;whiteSpace=wrap;html=1;container=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" vertex="1">
+          <mxGeometry x="170" y="100" width="122" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-31" value="Search for Plant Information" style="ellipse;whiteSpace=wrap;html=1;container=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" vertex="1">
+          <mxGeometry x="181" y="170" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-32" value="Use Crop Recommender" style="ellipse;whiteSpace=wrap;html=1;container=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" vertex="1">
+          <mxGeometry x="181" y="240" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" source="CDZ8dOxhKmwvRIjBTjYv-36" target="CDZ8dOxhKmwvRIjBTjYv-29" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" source="CDZ8dOxhKmwvRIjBTjYv-36" target="CDZ8dOxhKmwvRIjBTjYv-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" source="CDZ8dOxhKmwvRIjBTjYv-36" target="CDZ8dOxhKmwvRIjBTjYv-31" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" source="CDZ8dOxhKmwvRIjBTjYv-36" target="CDZ8dOxhKmwvRIjBTjYv-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-36" value="User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;container=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" vertex="1">
+          <mxGeometry x="50" y="138.5" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="CDZ8dOxhKmwvRIjBTjYv-47" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Grow Wise Usecase Diagram&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="CDZ8dOxhKmwvRIjBTjYv-44" vertex="1">
+          <mxGeometry x="97" y="-50" width="268" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
