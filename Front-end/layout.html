@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
+    
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="icon" href="{{ url_for ('static', filename =  'Assets/images/favicon.png')}}" type="image/x-icon">
     {% block head %}
 
@@ -46,39 +48,32 @@
     </header>
     {% block content %}
     {% endblock %}
+    <!-- Footer Section -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="footer-col"><img src="{{ url_for ('static', filename =  'Assets/images/logo.png')}}" alt="logo"></div>
-                <div class="footer-col">
-                    <h4>GrowWise</h4>
-                    <ul>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="#">our services</a></li>
-                        <li><a href="#">contact us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>get help</h4>
-                    <ul>
-                        <li><a href="#">privacy policy</a></li>
-                        <li><a href="#">terms & agreements</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <span>Copyright © 2023 GrowWise.com | All Rights Reserved.</span>
-    </footer>
+      <div class="container">
+          <div class="row">
+            <div class="footer-col"><img src="{{ url_for ('static', filename =  'Assets/images/logo.png')}}" alt="logo"></div>
+              <div class="footer-col">
+                  <h4>get help</h4>
+                  <ul>
+                      <li><a href="#">privacy policy</a></li>
+                      <li><a href="#">terms & agreements</a></li>
+                      <li><a href="#">FAQs</a></li>
+                  </ul>
+              </div>
+              <div class="footer-col">
+                  <h4>follow us</h4>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <span>Copyright © 2023 GrowWise.com | All Rights Reserved.</span>
+  </footer>
     <style>
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
@@ -239,6 +234,7 @@ nav a:hover,
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+  z-index: 100;
 }
 
 .dropdown.active > a + .dropdown-content {
@@ -325,7 +321,6 @@ nav a:hover,
     margin-top: 1em;
   }
 }
-
 /* Footer */
 
 .container {
@@ -343,7 +338,7 @@ ul {
 }
 
 .footer {
-  position: absolute;
+  /* position: absolute; */
   inset: auto 0 0;
   background-color: #24262b;
   padding: 70px 0;
@@ -475,6 +470,10 @@ document.querySelector('#menu-toggle').addEventListener('change', function () {
 
 
 </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+{% block script %}
+
+{% endblock %}
 </body>
 
 </html>

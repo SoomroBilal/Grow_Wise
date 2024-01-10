@@ -1,20 +1,25 @@
 {% extends 'layout.html' %}
+
 {% block title %}
     Grow Wise
 {% endblock %}
+
 {% block head %}
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<link rel="stylesheet" href=" {{ url_for ('static', filename = 'Assets/styles/style.css')}}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='Assets/styles/swiper.min.css') }}"> -->
+    <script src="{{ url_for('static', filename='Assets/scripts/script.js') }}" type="text/javascript" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='Assets/styles/style.css') }}">
 {% endblock %}
 
 {%block content %}
 <section class="swiper carousel">
     <div class="swiper-wrapper">
-        <div class="swiper-slide slide" style="background: url({{ url_for('static', filename = 'Assets/images/slider-img/slider-img-1.jpg') }}) no-repeat; ">
+        <div class="swiper-slide slide" style="background: url({{ url_for('static', filename = 'Assets/images/slider-img/slider-img-1.jpg') }}) no-repeat">
         </div>
-        <div class="swiper-slide slide" style="background: url({{ url_for('static', filename = 'Assets/images/slider-img/slider-img-2.jpg') }}) no-repeat;">
+        <div class="swiper-slide slide" style="background: url({{ url_for('static', filename = 'Assets/images/slider-img/slider-img-2.jpg') }}) no-repeat">
         </div>
-        <div class="swiper-slide slide" style="background: url({{ url_for('static', filename = 'Assets/images/slider-img/slider-img-3.jpg') }}) no-repeat;">
+        <div class="swiper-slide slide" style="background: url({{ url_for('static', filename = 'Assets/images/slider-img/slider-img-3.jpg') }}) no-repeat">
         </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -251,3 +256,4 @@
     </div>
 </section>
 {% endblock %}
+

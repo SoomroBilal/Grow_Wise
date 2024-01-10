@@ -79,137 +79,6 @@ select {
   background-color: #8cb53d;
 }
 
-/* HEADER SECTION */
-header {
-  background-color: #ffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0.5em;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 99;
-}
-
-.logo {
-  width: 6.25em;
-  cursor: pointer;
-  margin-left: 1em;
-}
-
-/* hamburger menu */
-
-.hamburger {
-  cursor: pointer;
-  display: none;
-  margin-right: 2em;
-}
-
-.hamburger input {
-  display: none;
-}
-
-.hamburger svg {
-  height: 2em;
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line {
-  fill: none;
-  stroke: #6a3a1d;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line-top-bottom {
-  stroke-dasharray: 12 63;
-}
-
-.hamburger input:checked + svg {
-  transform: rotate(-45deg);
-}
-
-.hamburger input:checked + svg .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
-}
-
-/* navbar */
-
-nav {
-  display: flex;
-  align-items: center;
-  margin-inline: auto;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 3em;
-  align-items: end;
-}
-
-nav a {
-  color: #6a3a1d;
-  text-decoration: none;
-  display: inline-block;
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-nav > ul > li > a.active,
-nav a:hover,
-.dropdown.active > a {
-  color: #8cb53d;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 2.3rem);
-  background-color: #af856a;
-  padding: 0.75rem;
-  border-radius: 0px 15px 15px 15px;
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  z-index: 99;
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.dropdown.active > a + .dropdown-content {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.dropdown.active > .dropdown-content > a {
-  color: #fff;
-  padding: 0.75em 1em;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown.active > .dropdown-content > a:hover {
-  color: #baf64b;
-}
-
-.show {
-  left: 0;
-}
-
 /* CAROUSEL SECTION */
 .carousel .slide {
   min-height: 85vh;
@@ -264,7 +133,7 @@ nav a:hover,
 .row {
   display: flex;
   justify-content: center;
-  column-gap: 5em;
+  column-gap: 1em;
   row-gap: 1em;
   flex-wrap: wrap;
 }
