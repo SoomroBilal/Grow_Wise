@@ -1,0 +1,66 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+ Crop Recommender
+{% endblock %}
+
+{% block head %}
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'Assets/styles/crop_recommender.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'Assets/styles/style.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+{% endblock %}
+
+
+{%block content %}
+
+<section>
+    
+    <div class="container1">
+        <div class="title"><h1>CROP RECOMMENDER</h1></div>
+        <div class="content">
+            <form action="/predict" method="POST">
+            <div class="user-details">
+              <div class="input-box">
+                
+                <input id="nitrogen" type="number" max="" min="1" name="nitrogen" placeholder="Enter Nitrogens quantity" required="required"/>
+              </div>
+              <div class="input-box">
+                
+                <input id="phosphorous" type="number" max="" min="1" name="phosphorous" placeholder="Enter Phosphorus quantity" required="required"/>
+              </div>
+              <div class="input-box">
+                
+                <input type="number" max="" min="1" id="k" name="k" placeholder="Enter Potassiums quantity" required="required"/>
+              </div>
+              <div class="input-box">
+                
+                <input type="number" max="" min="1" id="Humidity" name="Humidity" placeholder="Enter Humidity quantity in %" required="required" />
+              </div>
+              <div class="input-box">
+                
+                <input type="number" max="14" min="1" id="PH" name="PH" placeholder="Enter pH quantity" required="required" />
+              </div>
+              <div class="input-box">
+                
+                <input type="number" max="" min="1" id="rain_fall" name="rain_fall" placeholder="Enter Rainfall quantity in mm" required="required" />
+              </div>
+            </div>
+             <div class="last_input_box">
+                
+                <input type="number" max="" min="1" id="temperature" name="temperature" placeholder="Enter Temperature quantity in (℃)" required="required"/>
+              </div>
+            
+            <div class="button">
+                <input type="submit" value="Predict">
+            </div>
+          </form>
+        </div>
+      </div>
+      
+</section>
+
+{% endblock %}

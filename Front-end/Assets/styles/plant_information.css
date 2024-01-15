@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+*{
+    font-family: Poppins;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #317034;
+    border-radius: 5px 0 0 5px;
+}
+
+#searchButton {
+    background-color: #317034;
+    color: white;
+    border: 1px solid #317034;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+#searchButton:hover {
+    background-color: rgb(96, 18, 18);
+}
+
+
+.plant_info{
+    width: 60%;
+    min-height: 30vh;
+    text-align: justify;
+    margin-left: 400px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column; 
+    letter-spacing: 1.5px;
+}
+
+/* Add this CSS to styles.css */
+
+/* footer */
+.footer{
+    position: relative;
+}

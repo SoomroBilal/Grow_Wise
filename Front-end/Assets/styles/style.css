@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-
+/* *{
+  outline:red solid 1px !important;
+} */
 /* Box sizing rules */
 *,
 *::before,
@@ -474,50 +476,3 @@ svg {
   }
 }
 
-@media (max-width: 767px) {
-  .question h3 {
-    font-size: 1.5rem;
-  }
-
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
-
-  .footer-col:first-child {
-    order: 4;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .carousel .slide {
-    min-height: 50vh;
-  }
-
-  .heading {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 574px) {
-  .question h3 {
-    font-size: 1.3rem;
-  }
-
-  .answer p {
-    font-size: 0.8rem;
-  }
-
-  .footer-col:first-child {
-    display: none;
-  }
-
-  .footer-col {
-    width: 100%;
-  }
-
-  .heading span {
-    font-size: 1.5rem;
-  }
-}

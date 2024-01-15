@@ -34,7 +34,7 @@
                     <h2 class="card-title">Crop recommendation </h2>
                     <p class="card-body">Input your soil and environmental data to receive personalized crop
                         suggestions.</p>
-                    <a href="#" class="button">Get Recommendation</a>
+                    <a href="{{url_for('crop_recommender')}}" class="button">Get Recommendation</a>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
                 <div class="card-content">
                     <h2 class="card-title">Information Search</h2>
                     <p class="card-body">Access plant growth conditions, disease info, and prevention methods.</p>
-                    <a href="#" class="button">Search Information</a>
+                    <a href="{{ url_for('plant_information')}}" class="button">Search Information</a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
                     <h2 class="card-title">Disease Identifier </h2>
                     <p class="card-body">Accurately identify plant diseases from your images and suggest effective
                         treatments.</p>
-                    <a href="#" class="button">Identify Disease</a>
+                    <a href="{{ url_for('disease_identification')}}" class="button">Identify Disease</a>
                 </div>
             </div>
         </div>

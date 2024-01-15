@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+ Recommended Crop 
+{% endblock %}
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename = 'Assets/styles/style.css')}}">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'Assets/styles/recommend_output.css')}}">
+{% endblock %}
+
+{%block content %}
+<section>
+    <h1>RECOMMENDED CROP</h1>
+
+    <h2>{{ output }}</h2>
+
+    {% if crop_data %}
+    <div class="info">
+        <ul>
+            <li><strong>Scientific Name:</strong> {{ crop_data.scientific_name }}</li>
+            <li><strong>Family Name:</strong> {{ crop_data.family_name }}</li>
+            <li><strong>Planting Requirements:</strong> {{ crop_data.planting_requirements }}</li>
+            <li><strong>Diseases Susceptibility:</strong> {{ crop_data.diseases_susceptibility }}</li>
+        </ul>
+    </div>
+    {% else %}
+        <p>No information available for the recommended crop.</p>
+    {% endif %}
+
+    <p><a href="/">Back to Home</a></p>
+</section>
+{% endblock %}

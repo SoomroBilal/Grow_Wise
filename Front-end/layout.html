@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
-    
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" href="{{ url_for ('static', filename =  'Assets/images/favicon.png')}}" type="image/x-icon">
@@ -31,16 +30,17 @@
             <ul class="nav__list">
                 <li class="nav__item"> <a class="nav__link {% if request.path == url_for('index') %}active{% endif %}" href="{{ url_for('index') }}">Home</a> </li>
                 <li class="nav__item dropdown" data-dropdown>
-                    <a class="nav__link {% if request.path == url_for('disease_identification') %}active{% endif %}" href="#" data-dropdown-button>Services <i
-                            class='bx bx-chevron-down dropdown__icon'></i></a>
+                    <a class="nav__link {% if request.path == url_for('disease_identification') or request.path == url_for('crop_recommender') or request.path == url_for('plant_information') %}active{% endif %}" href="#" data-dropdown-button>Services <i
+                            class='bx bx-chevron- or down dropdown__icon'></i></a>
                     <div class="dropdown-content">
                       <a href="{{ url_for('disease_identification') }}">Disease Identifier</a>
-                        <a href="#">Crop Recommender</a>
-                        <a href="#">Plant Information</a>
+                        <a href="{{ url_for('crop_recommender') }}">Crop Recommender</a>
+                        <a href="{{url_for('plant_information')}}">Plant Information</a>
                     </div>
                 </li>
                 <li class="nav__item"><a class="nav__link" href="#">About Us</a></li>
                 <li class="nav__item"><a class="nav__link" href="#">Contact Us</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">FAQs</a></li>
             </ul>
         </nav>
     </header>
@@ -347,7 +347,7 @@ ul {
   inset: auto 0 0;
   background-color: #24262b;
   padding: 70px 0;
-  z-index: 100;
+  z-index: -1;
 }
 
 .footer-col {
