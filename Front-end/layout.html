@@ -28,19 +28,19 @@
         </label>
         <nav class="nav" id="nav-menu">
             <ul class="nav__list">
-                <li class="nav__item"> <a class="nav__link active" href="{{ url_for('index') }}">Home</a> </li>
+                <li class="nav__item"> <a class="nav__link {% if request.path == url_for('index') %}active{% endif %}" href="{{ url_for('index') }}">Home</a> </li>
                 <li class="nav__item dropdown" data-dropdown>
-                    <a class="nav__link" href="#" data-dropdown-button>Services <i
-                            class='bx bx-chevron-down dropdown__icon'></i></a>
+                    <a class="nav__link {% if request.path == url_for('disease_identification') or request.path == url_for('crop_recommender') or request.path == url_for('plant_information') %}active{% endif %}" href="#" data-dropdown-button>Services <i
+                            class='bx bx-chevron- or down dropdown__icon'></i></a>
                     <div class="dropdown-content">
-                        <a href="#">Disease Identifier</a>
+                      <a href="{{ url_for('disease_identification') }}">Disease Identifier</a>
                         <a href="{{ url_for('crop_recommender') }}">Crop Recommender</a>
                         <a href="{{url_for('plant_information')}}">Plant Information</a>
                     </div>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="{{ url_for('aboutus') }}">About Us</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Contact Us</a></li>
-                <li class="nav__item"><a class="nav__link" href="{{ url_for('faqs') }}">FAQs</a></li>
+                <li class="nav__item"> <a class="nav__link {% if request.path == url_for('about_us') %}active{% endif %}" href="{{ url_for('about_us') }}">About us</a> </li>
+                <li class="nav__item"> <a class="nav__link {% if request.path == url_for('contact_us') %}active{% endif %}" href="{{ url_for('contact_us') }}">Contact us</a> </li>
+                <li class="nav__item"><a class="nav__link" href="#">FAQs</a></li>
             </ul>
         </nav>
     </header>
@@ -332,6 +332,9 @@ nav a:hover,
 
 .row {
   display: flex;
+  justify-content: center;
+  column-gap: 5em;
+  row-gap: 1em;
   flex-wrap: wrap;
 }
 

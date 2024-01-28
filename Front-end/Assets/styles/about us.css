@@ -73,11 +73,7 @@ section{
     border-radius: 5px;
     transition: .3s all ease;
 }
-/* .text-container a:hover{
-    background-color: transparent;
-    color: black;
-    border: 1px solid #317034;
-} */
+
 @media screen and (max-width: 1600px){
     .about-container{
         width: 90%;

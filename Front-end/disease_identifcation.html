@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Disease Identification
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'Assets/styles/disease_identification.css')}}">
+<script src="{{ url_for('static', filename = 'Assets/scripts/disease_identification.js')}}"></script>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="diseae-identification-container">    
+            <h1 id="page-heading">DISEASE IDENTIFICATION</h1>
+            <form id="disease-identification-form" method="post" enctype="multipart/form-data">
+                <div class="dropdown-div">
+                    <select name="plants" id="plants">
+                        <option value="default">Select a plant</option>
+                        <option value="apple">Apple</option>
+                        <option value="banana">Banana</option>
+                        <option value="cherry">Cherry</option>
+                        <option value="cotton">Cotton</option>
+                        <option value="grape">Grape</option>
+                        <option value="maize">Maize(Corn)</option>
+                        <option value="mango">Mango'</option>
+                        <option value="peach">Peach</option>
+                        <option value="potato">Potato</option>
+                        <option value="pepper">Pepper</option>
+                        <option value="rice">Rice</option>
+                        <option value="soybean">Soybean</option>
+                        <option value="strawberry">Strawberry</option>
+                        <option value="tomato">Tomato</option>
+                        <option value="wheat">Wheat</option>
+                    </select>
+                </div>
+                <div class="upload-image-button">
+                    <input type="file" id="file-input" name="file-input" accept=".png, .jpg, .jpeg">
+                    <label for="file-input" id="file-input-label">
+                        <div id="img-view">
+                            <img src="{{ url_for ('static', filename =  'Assets/images/icon_img/disea.png')}}"  alt="plant" class="avatar-icon">
+                            <img src="{{ url_for ('static', filename =  'Assets/images/icon_img/uplod_icon.png')}}"  alt="icon" class="uplod_icon">
+                            <p class="par"> <strong>Please upload the affected image</strong> </p>
+                            <span class="file-types">PNG or JPG</span>
+                        </div>                        
+
+                    </label>
+                </div>
+                
+                <button id="submit-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+{% endblock %}

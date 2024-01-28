@@ -8,40 +8,49 @@
 
 
 /* ===== Custom Styling ===== */
-section{
+section {
   letter-spacing: 1.5px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  margin-top: 20px;
+  margin-bottom: 70px;
 }
 
-h1{
-  position: relative; 
-  text-align: center;  
-  letter-spacing: 1.5px; 
+ h1 {
+    position: relative;
+    letter-spacing: 1.5px;
 }
-h1::before {
+
+ h1::before {
   content: "";
   position: absolute;
-  left: 41%;
   bottom: 0;
   height: 2px;
   width: 60px;
   background: linear-gradient(135deg, #4CAF50, #4CAF50);
 }
-h2{
-    text-align: center;
-}
-.info{
-    
-  margin-left: 300px;
-  width: 60%;
-  text-align: justify;
-  /* padding-inline: 100px; */
-}
-.info ul li{
-  margin-top: 5px;
 
+.icon-list li {
+   list-style-type: none;
+   padding-left: 30px;
+  }
+  
+  
+.info {
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+  text-align: justify;
+  width: 60%; /* Adjust width as needed */
 }
-a{
+
+.info ul li {
+  margin-top: 5px;
+}
+
+a {
   text-decoration: none;
-} 
+}
 
 
