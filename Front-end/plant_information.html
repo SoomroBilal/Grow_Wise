@@ -9,8 +9,9 @@
 {% endblock %}
 
 {% block content %}
-<div style="height: 200px; width: 100%;">
-    <h1 style="text-align: center; padding-top: 10px;">Plant Information Search</h1>
+<section>
+<div style="width: 100%;">
+    <h1>Plant Information Search</h1>
     <form action="/plant_information" method="post">
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Search any plant" name="searchInput">
@@ -18,14 +19,17 @@
         </div>
     </form>    
 </div>
-
-<div class="plant_info">
+<div class="info">
     {% if data %}
-        <h3>Plant Name: {{ data.name }}</h3>
-        <h3>Scientific Name: {{ data.scientific_name }}</h3>
-        <h3>Family Name: {{ data.common_name }}</h3>
-        <p><h3>Planting Requirements:</h3> {{data.planting_requirements}}</p>
-        <p><h3>Susceptibility:</h3> {{data.diseases_susceptibility}}</p>
+    <ul class="icon-list">
+        <li id="name"> <strong>Plant Name: </strong> {{ data.name }}</li>
+        <li id="scientific"><strong>Scientific Name:</strong> {{ data.scientific_name }}</li>
+        <li id="family"><strong>Family Name:</strong> {{ data.family_name }}</li>
+        <li id="planting"><strong>Planting Requirements:</strong> {{ data.planting_requirements }}</li>
+        <li id="diseases"><strong>Diseases Susceptibility:</strong> {{ data.diseases_susceptibility }}</li>
+    </ul>
     {% endif %}
 </div>
+
+</section>
 {% endblock %}

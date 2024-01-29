@@ -8,10 +8,14 @@
 
 
 /* ===== Custom Styling ===== */
-section{
+section {
   letter-spacing: 1.5px;
-  min-height: 50vh;
-  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column; /* Align items in a column */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text content */
+  margin-top: 20px;
+  margin-bottom: 70px;
 }
 
 h1{
@@ -23,38 +27,33 @@ h1{
 h1::before {
   content: "";
   position: absolute;
-  left: 36.5%;
   bottom: 0;
   height: 2px;
   width: 60px;
   background: linear-gradient(135deg, #4CAF50, #4CAF50);
-  transform: translateX (-36.5%);
+  /* transform: translateX (-36.5%); */
 }
+.user-image {
+  width: 500px;
+  height: 300px;
+}
+
 .img{
-  display: flex;
-  width: 60%;
-  text-align: justify;
+  text-align: center;
   margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
-}
-
-p{
-  margin-top: 90px;
-  margin-left: 40px;
-  float: right;
-  
 }
 .info {
   width: 60%;
   text-align: justify;
-  margin-top: 10px;
+  margin-top:10px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.info ul li{
-  margin-top: 5px;
+ul li{
+  margin-top: 10px;
 
 }
 a{

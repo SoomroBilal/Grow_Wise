@@ -1,0 +1,115 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+ about us
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'Assets/styles/about us.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'Assets/styles/style.css')}}">
+{% endblock %}
+
+
+{%block content %}
+
+<section>
+    <div class="wrapper">
+
+        <div class="background-container">
+    
+        </div>
+        <div class="about-container">
+
+            <div class="text-container">
+                <h1>About us</h1>
+                <p>Welcome to our web application! We are a passionate team committed to transforming agriculture. Through innovative technologies like machine learning and web tools, we've developed a user-friendly platform. Our goal is to empower farmers with a Disease Identifier, a Crop Recommender, and a Plant Information Search feature. Join us on this journey to revolutionize crop management and foster sustainable farming practices.</p>
+            </div>
+            
+            <div class="image-container">
+                <img src="{{ url_for ('static', filename =  'Assets/images/about_us.jpg')}}">
+                
+            </div>
+
+
+            
+        </div>
+    </div>
+    <!-- Section -->
+
+    <div class="wrapper">
+
+        <div class="background-container">
+    
+        </div>
+        <div class="about-container">
+            
+            <div class="image-container">
+
+                <img src="{{ url_for ('static', filename =  'Assets/images/our_story.jpg')}}">
+                
+                
+            </div>
+
+            <div class="text-container">
+                <h1>Our Story</h1>
+                <p>As fellow agricultural enthusiasts, we noticed a shift in the farming sector.
+                    Farmers were facing numerous challenges and were in dire need of a solution 
+                    that could help them overcome these issues.
+                    From this realization, a solution was born: Grow Wise. It was founded on the 
+                    principle of “sustainable farming”, the notion that farmers don’t just need tools, 
+                    but they need a comprehensive solution that can help them grow better crops and build stronger businesses.</p>
+            </div>
+            
+        </div>
+    </div>
+    <!-- sectiom -->
+    <div class="wrapper">
+
+        <div class="background-container">
+
+        </div>
+        <div class="about-container">
+            <div class="text-container">
+                <h1>Our Mission</h1>
+                <p>At Grow Wise, we use technology to empower farmers for better crop growth, sustainable
+                    agriculture, and to spread happiness around the world. We offer excellent customer support and aim to make a difference in farming, one crop at a time. We believe in the power of sustainable farming to bring joy to the world.</p>
+            </div>
+            
+            <div class="image-container">
+
+                <img src="{{ url_for ('static', filename =  'Assets/images/our_vision.jpg')}}">
+                
+            </div>
+
+        
+            
+        </div>
+    </div>
+    <!-- section -->
+    <div class="wrapper">
+
+        <div class="background-container">
+
+    
+        </div>
+        <div class="about-container">
+            
+            <div class="image-container">
+                <img src="{{ url_for ('static', filename =  'Assets/images/our_team.jpeg')}}">
+            </div>
+
+            <div class="text-container">
+                <h1>Our Team</h1>
+                <p> 
+                    We, Mukhtyar Khan, Abdul Kabeer, and Muhammad Bilal, are a passionate trio in data science and machine learning.
+                    Abdul is our data analyst, Mukhtyar excels in machine learning, and Bilal applies our insights to solve 
+                    real-world problems. Our mission is to use our expertise to address real-world issues, 
+                    believing in the transformative power of data and machine learning to drive positive change and innovation.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+{% endblock %}

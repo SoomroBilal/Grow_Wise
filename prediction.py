@@ -4,9 +4,9 @@ import numpy as np
 import os
 import sklearn
 from sklearn.preprocessing import MinMaxScaler
-# from tensorflow import keras
 import pickle
 
+#  Predicting class labels for disease indentification model
 def predicting_class(model_name):
     models_category = {
     'apple_model': ['Scab', 'Black Rot', 'Cedar Rust', 'Healthy'],
@@ -28,9 +28,9 @@ def predicting_class(model_name):
     categories = models_category.get(model_name)
     return categories
 
+#  Loading the trained model and pre-process the input image for disease identification
 def load_and_classify(model_name, image_path):
     script_dir = os.path.dirname(__file__)
-
     # Navigate to the 'models' folder using a relative path
     models_folder = os.path.join(os.pardir, 'model')
     model_path = os.path.join(models_folder, f'{model_name}.h5')
@@ -52,7 +52,6 @@ def load_and_classify(model_name, image_path):
     return class_label
 
 # Recommender part
-
 def recommendation(N, P, K, temperature, humidity, ph, rainfall):
     # Load the saved deep learning model
     loaded_model_path = "../model/crop_rec_model.h5"

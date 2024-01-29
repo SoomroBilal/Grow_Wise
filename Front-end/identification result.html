@@ -17,8 +17,13 @@
     
     {% if identification_data %}
     <div class="img">
-        <img src="{{ url_for('get_image', filename=usr_image) }}" alt="User image">
-        <p> <strong>Disease:</strong>{{ result }}</p>
+        <ul>
+            <li><img src="{{ url_for('get_image', filename=usr_image)}}" alt="User image" class="user-image">
+            </li>
+            <li><strong>Disease: </strong>{{  result}}</li>
+        </ul>
+        
+       
     </div>
     
     <div class="info">
@@ -31,17 +36,17 @@
 
     {% if common_disease %}
     <div class="img">
-        <img src="{{ url_for('get_image', filename=usr_image) }}" alt="User image">
-        <p> <strong>Your plant is healthy</strong> </p>
-      </div>
+        <ul>
+            <li><img src="{{ url_for('get_image', filename=usr_image)}}" alt="User image" class="user-image"></li>
+            <li><strong>Your plant is:</strong>{{ result}}</li>
+        </ul>
+    </div>
+
     <div class="info">
         <ul>
             <li><strong>Disease Susceptibility:</strong> {{ common_disease.diseases_susceptibility }}</li>
         </ul>
     </div>
     {% endif %}
-
-
-    <!-- <p><a href="/">Back to Home</a></p> -->
 </section>
 {% endblock %}

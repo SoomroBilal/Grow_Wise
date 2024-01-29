@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
-/* *{
-  outline:red solid 1px !important;
-} */
-/* Box sizing rules */
+
 *,
 *::before,
 *::after {
@@ -475,4 +472,3 @@ svg {
     z-index: -1;
   }
 }
-

@@ -22,7 +22,7 @@
                         <option value="cotton">Cotton</option>
                         <option value="grape">Grape</option>
                         <option value="maize">Maize(Corn)</option>
-                        <option value="mango'">Mango'</option>
+                        <option value="mango">Mango</option>
                         <option value="peach">Peach</option>
                         <option value="potato">Potato</option>
                         <option value="pepper">Pepper</option>
@@ -34,9 +34,18 @@
                     </select>
                 </div>
                 <div class="upload-image-button">
-                    <input type="file" id="file-input" name="file-input">
-                    <label for="file-input" id="file-input-label">Upload Image</label>
+                    <input type="file" id="file-input" name="file-input" accept=".png, .jpg, .jpeg">
+                    <label for="file-input" id="file-input-label">
+                        <div id="img-view">
+                            <img src="{{ url_for ('static', filename =  'Assets/images/icon_img/disea.png')}}"  alt="plant" class="avatar-icon">
+                            <img src="{{ url_for ('static', filename =  'Assets/images/icon_img/uplod_icon.png')}}"  alt="icon" class="uplod_icon">
+                            <p class="par"> <strong>Please upload the affected image</strong> </p>
+                            <span class="file-types">PNG or JPG</span>
+                        </div>                        
+
+                    </label>
                 </div>
+                
                 <button id="submit-button" type="submit">Submit</button>
             </form>
         </div>

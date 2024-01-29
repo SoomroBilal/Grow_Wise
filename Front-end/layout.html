@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="icon" href="{{ url_for ('static', filename =  'Assets/images/favicon.png')}}" type="image/x-icon">
     {% block head %}
 
@@ -31,16 +31,15 @@
                 <li class="nav__item"> <a class="nav__link {% if request.path == url_for('index') %}active{% endif %}" href="{{ url_for('index') }}">Home</a> </li>
                 <li class="nav__item dropdown" data-dropdown>
                     <a class="nav__link {% if request.path == url_for('disease_identification') or request.path == url_for('crop_recommender') or request.path == url_for('plant_information') %}active{% endif %}" href="#" data-dropdown-button>Services <i
-                            class='bx bx-chevron- or down dropdown__icon'></i></a>
+                      class='bx bx-chevron-down dropdown__icon'></i></a>
                     <div class="dropdown-content">
                       <a href="{{ url_for('disease_identification') }}">Disease Identifier</a>
                         <a href="{{ url_for('crop_recommender') }}">Crop Recommender</a>
                         <a href="{{url_for('plant_information')}}">Plant Information</a>
                     </div>
                 </li>
-                <li class="nav__item"><a class="nav__link" href="#">About Us</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">Contact Us</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">FAQs</a></li>
+                <li class="nav__item"> <a class="nav__link {% if request.path == url_for('about_us') %}active{% endif %}" href="{{ url_for('about_us') }}">About us</a> </li>
+                <li class="nav__item"> <a class="nav__link {% if request.path == url_for('contact_us') %}active{% endif %}" href="{{ url_for('contact_us') }}">Contact us</a> </li>
             </ul>
         </nav>
     </header>
@@ -94,6 +93,25 @@
 * {
   margin: 0;
   padding: 0;
+}
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #6a3a1d;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #baf64b;
+  border: 0.1em solid #6a3a1d;
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8cb53d;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
